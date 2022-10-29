@@ -54,6 +54,8 @@ for (int i = 0; i < resourceCount; i++)
     {
         file.Write(buff, 0, length);
     }
+
+    ArrayPool<byte>.Shared.Return(buff);
 }
 
 return 0;
